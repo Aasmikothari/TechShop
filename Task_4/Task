@@ -1,1 +1,17 @@
+Task 4: Composition:
 
+Ensure that the Order and OrderDetail classes correctly use composition to reference Customer and Product objects.
+
+• Orders Class with Composition: 
+  o In the Orders class, we want to establish a composition relationship with the Customers class, indicating that each order is associated with a specific customer. 
+  o In the Orders class, we've added a private attribute customer of type Customers, establishing a composition relationship. The Customer property provides access to the Customers object associated with the order.
+
+• OrderDetails Class with Composition: 
+  o Similarly, in the OrderDetails class, we want to establish composition relationships with both the Orders and Products classes to represent the details of each order, including the product being ordered. 
+  o In the OrderDetails class, we've added two private attributes, order and product, of types Orders and Products, respectively, establishing composition relationships. The Order property provides access to the Orders object associated with the order detail, and the Product property provides access to the Products object representing the product in the order detail.
+
+• Customers and Products Classes: 
+  o The Customers and Products classes themselves may not have direct composition relationships with other classes in this scenario. However, they serve as the basis for composition relationships in the Orders and OrderDetails classes, respectively.
+
+• Inventory Class: 
+o The Inventory class represents the inventory of products available for sale. It can have composition relationships with the Products class to indicate which products are in the inventory.
