@@ -1,4 +1,0 @@
-Task 3: Encapsulation:
-
-• Implement encapsulation by making the attributes private and providing public properties (getters and setters) for each attribute. 
-• Add data validation logic to setter methods (e.g., ensure that prices are non-negative, quantities are positive integers).
