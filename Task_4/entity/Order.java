@@ -26,7 +26,9 @@ public class Order {
     public List<OrderDetail> getOrderDetails() { return orderDetails; }
 
     public void addOrderDetail(OrderDetail orderDetail) {
-        orderDetails.add(orderDetail);
+        if (orderDetail != null) {
+            orderDetails.add(orderDetail);
+        }
     }
     
     public void setTotalAmount(double totalAmount) {
