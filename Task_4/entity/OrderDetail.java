@@ -14,6 +14,11 @@ public class OrderDetail {
         this.quantity = quantity;
         order.addOrderDetail(this);
     }
+    
+    public int getOrderDetailID() { return orderDetailID; }
+    public Order getOrder() { return order; }
+    public Product getProduct() { return product; }
+    public int getQuantity() { return quantity; }
 
     public double calculateSubtotal() {
         return product.getPrice() * quantity;
@@ -24,10 +29,16 @@ public class OrderDetail {
     }
        
     public void updateQuantity(int newQuantity) {
+    	if (newQuantity <= 0) {
+            throw new IllegalArgumentException("Quantity must be greater than zero");
+        }
         this.quantity = newQuantity;
     }
 
     public void addDiscount(double discountPercentage) {
+    	if (discountPercentage < 0 || discountPercentage > 100) {
+            throw new IllegalArgumentException("Invalid discount percentage");
+        }
         double discountAmount = (product.getPrice() * discountPercentage) / 100;
         double newPrice = product.getPrice() - discountAmount;
         System.out.println("New price after discount: " + newPrice);
