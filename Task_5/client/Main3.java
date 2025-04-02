@@ -16,12 +16,10 @@ public class Main3 {
         System.out.println("Order created successfully!");
 
         try {
-            // Adding valid order details
             OrderDetail validDetail = new OrderDetail(5001, order, laptop, 2);
             order.addOrderDetail(validDetail);
             System.out.println("Order detail added successfully!");
 
-            // Adding invalid order detail (null product)
             OrderDetail invalidDetail = new OrderDetail(5002, order, null, 1);
             order.addOrderDetail(invalidDetail);
         } catch (IncompleteOrderException e) {
@@ -29,7 +27,6 @@ public class Main3 {
         }
 
         try {
-            // Setting a negative total amount
             order.setTotalAmount(-50);
         } catch (InvalidDataException e) {
             System.out.println(e.getMessage());
