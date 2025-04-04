@@ -92,8 +92,7 @@ public class Main {
 
     private static void processOrders() {
         System.out.println("===== Order Processing =====");
-        System.out.println("1. Place Order");
-        System.out.println("2. View Order History");
+        System.out.println("1. View Order History");
         System.out.print("Enter your choice: ");
         int choice = scanner.nextInt();
         scanner.nextLine();
