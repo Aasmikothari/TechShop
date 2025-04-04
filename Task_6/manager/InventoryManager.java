@@ -111,7 +111,6 @@ public class InventoryManager {
                 .collect(Collectors.toList());
     }
 
-    // ✅ ADDED: Method to return the inventory list for OrderManager
     public List<Inventory> getInventoryList() {
         return new ArrayList<>(inventoryMap.values());
     }
